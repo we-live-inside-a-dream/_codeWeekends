@@ -13,7 +13,12 @@ console.log('Sanitize ')
 console.log('ask receptionist about floor seat availability')
 console.log(floors)
 console.log('floor selection based on seats')
-console.log(floors.seats)
+// console.log(floors.seats)
+for(let i = 0; i < floors.length; i++){
+    if(floors[i].seats >= 10){
+        console.log(floors[i])
+    }
+}
     if (floors.seats >= 10){
         console.log('setup for coding')
     }else{ 
