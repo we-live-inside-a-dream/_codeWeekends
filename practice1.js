@@ -16,3 +16,11 @@ function solution(number){
 
     return sum
 }
+
+// JavaScript Solution 2
+
+function solution(number){
+    console.log(number)
+    return number > 0 ? Array(number).fill(0).map((_,i) => i).reduce((total, item) => item % 3 === 0 || item % 5 === 0 ? total + item : total, 0) : 0
+
+}
