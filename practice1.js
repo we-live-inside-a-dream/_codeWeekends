@@ -24,3 +24,25 @@ function solution(number){
     return number > 0 ? Array(number).fill(0).map((_,i) => i).reduce((total, item) => item % 3 === 0 || item % 5 === 0 ? total + item : total, 0) : 0
 
 }
+
+// TypeScript Solution
+
+export class Challenge {
+    static solution(number: number) {
+        if(number <= 0){
+            return 0
+        }
+        console.log(number)
+        let multiples: number[] = []
+        for(let i: number = 1; i < number; i++){
+            console.log()
+            if(i % 3 == 0 || i % 5 == 0){
+                multiples.push(i)
+            }
+        }
+        console.log(multiples)
+        return multiples.reduce((total, item) => {
+            return total + item
+        },0)
+    }
+}
