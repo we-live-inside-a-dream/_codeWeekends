@@ -20,3 +20,11 @@ function getCount(str) {
     return vowelsCount
 
 }
+
+// JavaScript Solution 2
+function getCount(str) {
+    let shit = str.match(/[aeiou]/gi)
+    console.log(shit)
+
+    return shit?.length || 0;
+}
