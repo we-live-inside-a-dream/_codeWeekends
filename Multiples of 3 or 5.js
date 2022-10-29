@@ -36,3 +36,15 @@ function solution(number){
     return number > 0 ? Array(number).fill(0).map((_,i) => i).reduce((total, item) => item % 3 === 0 || item % 5 === 0 ? total + item : total, 0) : 0
     
   }
+// JavaScript Solution 3
+
+function solution(number){
+    let sum = 0
+    for(let i = 3; i < number; i++){
+      if(i % 3 === 0 || i % 5 === 0){
+        sum += i
+      }
+    }
+    
+    return sum
+  }
